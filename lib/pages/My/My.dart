@@ -10,6 +10,12 @@ class My extends StatefulWidget {
 class _My extends State<My> {
   @override
   Widget build(BuildContext context) {
-    return Text("my");
+    return Listener(
+      onPointerDown: (PointerEvent pointerEvent) {
+        print("按下时间");
+        print("object");
+      },
+      child: Text("点击"),
+    );
   }
 }
